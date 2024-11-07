@@ -1,30 +1,4 @@
-import Image from "next/image";
-import { useState } from 'react'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-
 import MultistepForm from "./form";
-
-const items = {
-  "Category 1": [
-    { name: "Item 1", price: 10 },
-    { name: "Item 2", price: 15 },
-    { name: "Item 3", price: 20 },
-  ],
-  "Category 2": [
-    { name: "Item 4", price: 25 },
-    { name: "Item 5", price: 30 },
-    { name: "Item 6", price: 35 },
-  ],
-  "Category 3": [
-    { name: "Item 7", price: 40 },
-    { name: "Item 8", price: 45 },
-    { name: "Item 9", price: 50 },
-  ],
-}
 
 export default function Home() {
 
