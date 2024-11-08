@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 
 const items = {
   "Category 1": [
@@ -132,20 +132,24 @@ export default function MultistepForm() {
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
-          {step > 1 && (
-            <Button onClick={handlePrevious} variant="outline">
-              Previous
-            </Button>
-          )}
-          {step < 3 ? (
-            <Button onClick={handleNext} className="bg-[#cc092f] hover:bg-[#a00725] text-white">
-              Next
-            </Button>
-          ) : (
-            <Button onClick={handleSubmit} className="bg-[#cc092f] hover:bg-[#a00725] text-white">
-              Checkout
-            </Button>
-          )}
+          <div>
+            {step > 1 && (
+              <Button onClick={handlePrevious} variant="outline">
+                Previous
+              </Button>
+            )}
+          </div>
+          <div>
+            {step < 3 ? (
+              <Button onClick={handleNext} className="bg-[#cc092f] hover:bg-[#a00725] text-white">
+                Next
+              </Button>
+            ) : (
+              <Button onClick={handleSubmit} className="bg-[#cc092f] hover:bg-[#a00725] text-white">
+                Checkout
+              </Button>
+            )}
+          </div>
         </CardFooter>
       </Card>
     </div>
